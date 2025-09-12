@@ -1,0 +1,18 @@
+:root {
+  --pri:#08CB00;
+  --sec:#253900;
+  --ter1:#000000;
+  --ter2:#EEEEEE;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}/*# sourceMappingURL=style.css.map */
