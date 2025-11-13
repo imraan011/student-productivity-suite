@@ -1,14 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>student productive suite</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.7.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="shortcut icon"
+      href="https://imgs.search.brave.com/mDTOJ6YMbfi-5qVigX-4_bfUB1SzszMykf_v28pzVpY/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NzExaktWLUoxT0wu/anBn"
+      type="image/-icon"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="text-xl">
+    <nav>
+      <h1>
+        <span class="anima">Good</span> <span class="anima">Morning !</span>
+        <span class="anima">Ishtikhar Khan</span>
+      </h1>
+    </nav>
 
+    <main>
+      <section class="card flex absolute flex-wrap gap-10">
+        <div class="events" id="0">
+          <img src="./assets/todo.png" alt="" />
+          <h1 class="text">To-Do List</h1>
+        </div>
+        <div class="events" id="1">
+          <img src="./assets/pomodoro.png" alt="" />
+          <h1 class="text">Pomodoro Timer</h1>
+        </div>
+        <div class="events" id="2">
+          <img src="./assets/dailyplanner.png" alt="" />
+          <h1 class="text">Daily Planner</h1>
+        </div>
+        <div class="events" id="3">
+          <img src="./assets/motivation.png" alt="" />
+          <h1 class="text">Motivational Quote</h1>
+        </div>
+        <div class="events" id="4">
+          <img src="./assets/journal.png" alt="" />
+          <h1 class="text">Daily Journal</h1>
+        </div>
+      </section>
+
+      <section class="fullevent todo-sec" id="0">
+        <button class="back" id="0">Close</button>
+        <h1 class="anima heading">Your Personalised Task List</h1>
+        <div class="todoappbox flex">
+          <div class="taskadd">
+            <form>
+              <input
+                class="taskinp"
+                type="text"
+                placeholder="Enter Task here..."
+              />
+              <textarea
+                name=""
+                id="textareainp"
+                cols="30"
+                rows="10"
+                placeholder="Enter Detaies here"
+              ></textarea>
+              <div class="flex gap-2 text-center">
+                <input type="checkbox" id="check" class="scale-150" /><label
+                  for=""
+                  >Mark as important</label
+                >
+              </div>
+
+              <button>Add Task</button>
+            </form>
+          </div>
+          <div class="taskview">
+            <h1 class="anima">Your Tasks Here...</h1>
+            <div class="taskslist"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="fullevent" id="1">
+        <button class="back" id="1">Close</button>
+        <h1 class="heading anima">Pomodoro Timer</h1>
+      </section>
+
+      <section class="fullevent daily-planner" id="2">
+        <button class="back" id="2">Close</button>
+        <h1 class="heading anima">Plan Your Daily Goals ...</h1>
+
+        <div class="daily-plannerarea"></div>
+      </section>
+
+      <section class="fullevent Motivation" id="3">
+        <button class="back" id="3">Close</button>
+        <h1 class="heading anima">Motivational Quote</h1>
+
+        <div class="moti-1">
+          <div class="moti-2">
+            <h1 class="anima">Quote of the day...</h1>
+            <hr />
+          </div>
+          <h2>Lorem ipsum dolor sit amet.</h2>
+          <h3>--Ishtikhar Khan</h3>
+        </div>
+      </section>
+
+      <section class="fullevent" id="4">
+        <button class="back" id="4">Close</button>
+        <h1 class="heading anima">Daily Journal</h1>
+      </section>
+    </main>
+    <footer>
+      <h1>Made with &#10084; by Ishtikhar Khan</h1>
+    </footer>
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
