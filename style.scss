@@ -291,8 +291,7 @@ main {
   }
 
   .Motivation {
-    display: block;
-
+    // display: block;
     .moti-1 {
       justify-self: center;
       width: 50%;
@@ -301,9 +300,67 @@ main {
       border-radius: 10px;
       padding: 1rem;
       margin-top: 5rem;
+      box-shadow: 0 10px 900px rgba(91, 207, 33, 0.826);
+
       .moti-2 {
         font-weight: 700;
         margin-bottom: 1rem;
+      }
+      h2 {
+        padding: 1rem;
+        font-size: 30px;
+      }
+      h3 {
+        font-size: 25px;
+        text-align: right;
+        padding-right: 2rem;
+      }
+    }
+  }
+
+  .pomodoro {
+    display: block;
+
+    .timerbg {
+      color: #000000;
+
+      .timer {
+        width: 55%;
+        color: var(--sec);
+        justify-items: center;
+        align-items: center;
+        margin-top: 3rem;
+        padding: 4rem 3rem;
+        background: #818181;
+        justify-self: center;
+        box-shadow: 0px 10px 900px #08cb00;
+        border-radius: 150px;
+        border: 2px solid var(--ter1);
+        .time {
+          padding: 1.5rem;
+          font-size: 10rem;
+          font-family: "Times New Roman", Times, serif;
+        }
+
+        .btn {
+          gap: 10px;
+          padding: 2rem;
+          button {
+            background: #068000;
+            margin: 0rem 2rem;
+            padding: 1rem 2rem;
+            border-radius: 15px;
+            cursor: pointer;
+            font-size: 30px;
+            transition: all ease-in-out 0.2s;
+          }
+          button:hover {
+            background: #014818;
+          }
+          button:active {
+            scale: 0.95;
+          }
+        }
       }
     }
   }

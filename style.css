@@ -269,9 +269,6 @@ main .daily-planner .daily-plannerarea .plans:hover {
 main .daily-planner .daily-plannerarea:hover {
   box-shadow: 0 10px 60px rgba(91, 207, 33, 0.826);
 }
-main .Motivation {
-  display: block;
-}
 main .Motivation .moti-1 {
   justify-self: center;
   width: 50%;
@@ -280,10 +277,63 @@ main .Motivation .moti-1 {
   border-radius: 10px;
   padding: 1rem;
   margin-top: 5rem;
+  box-shadow: 0 10px 900px rgba(91, 207, 33, 0.826);
 }
 main .Motivation .moti-1 .moti-2 {
   font-weight: 700;
   margin-bottom: 1rem;
+}
+main .Motivation .moti-1 h2 {
+  padding: 1rem;
+  font-size: 30px;
+}
+main .Motivation .moti-1 h3 {
+  font-size: 25px;
+  text-align: right;
+  padding-right: 2rem;
+}
+main .pomodoro {
+  display: block;
+}
+main .pomodoro .timerbg {
+  color: #000000;
+}
+main .pomodoro .timerbg .timer {
+  width: 55%;
+  color: var(--sec);
+  justify-items: center;
+  align-items: center;
+  margin-top: 3rem;
+  padding: 4rem 3rem;
+  background: #818181;
+  justify-self: center;
+  box-shadow: 0px 10px 900px #08cb00;
+  border-radius: 150px;
+  border: 2px solid var(--ter1);
+}
+main .pomodoro .timerbg .timer .time {
+  padding: 1.5rem;
+  font-size: 10rem;
+  font-family: "Times New Roman", Times, serif;
+}
+main .pomodoro .timerbg .timer .btn {
+  gap: 10px;
+  padding: 2rem;
+}
+main .pomodoro .timerbg .timer .btn button {
+  background: #068000;
+  margin: 0rem 2rem;
+  padding: 1rem 2rem;
+  border-radius: 15px;
+  cursor: pointer;
+  font-size: 30px;
+  transition: all ease-in-out 0.2s;
+}
+main .pomodoro .timerbg .timer .btn button:hover {
+  background: #014818;
+}
+main .pomodoro .timerbg .timer .btn button:active {
+  scale: 0.95;
 }
 
 footer {

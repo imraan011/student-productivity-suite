@@ -14,6 +14,7 @@ function openpages() {
     });
   });
 }
+
 openpages();
 
 function todolist() {
@@ -71,6 +72,7 @@ function todolist() {
     rendertask();
   });
 }
+
 todolist();
 
 function DailyPlanner() {
@@ -105,3 +107,21 @@ function DailyPlanner() {
 }
 
 DailyPlanner();
+
+function motivation() {
+  let motivationquote = document.querySelector(".moti-1 h2");
+  let motivationauthor = document.querySelector(".moti-1 h3");
+
+  async function quote() {
+    let response = await fetch(
+      "https://api.quotable.io/random?tags=money|inspirational|success|study"
+    );
+
+    let data = await response.json();
+    motivationquote.innerHTML = data.content;
+    motivationauthor.innerHTML = "-- " + data.author;
+  }
+  quote();
+}
+
+motivation();
