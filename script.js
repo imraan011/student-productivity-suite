@@ -94,7 +94,7 @@ function DailyPlanner() {
     } >  
     </div>`;
   });
-  dayplanner = document.querySelector(".daily-plannerarea").innerHTML =
+  DailyPlanner = document.querySelector(".daily-plannerarea").innerHTML =
     wholehours;
 
   var dayplannerinput = document.querySelectorAll(".plans input");
@@ -126,4 +126,67 @@ function motivation() {
 
 motivation();
 
+let time = document.querySelector(".time h1");
+let start = document.querySelector(".start");
+let pause = document.querySelector(".pause");
+let reset = document.querySelector(".reset");
+let isworksession = true;
+let message = document.querySelector(".timer .message")
+let timetext = document.querySelector(".time h1")
+let interval = null;
 
+
+let totalsecond = 25 * 60;
+function updateTimer() {
+  let minute = Math.floor(totalsecond / 60);
+  let second = Math.floor(totalsecond % 60);
+  time.innerHTML = `${String(minute).padStart("2", "0")}:${String(
+    second
+  ).padStart("2", "0")}`;
+}
+
+function startTimer() {
+  clearInterval(interval);
+
+  if (isworksession) {
+    interval = setInterval(() => {
+      if (totalsecond > 0) {
+        totalsecond--;
+        updateTimer();
+      } else {
+        isworksession = false;
+        clearInterval(interval);
+        totalsecond = 5 * 60;
+        message.innerHTML="Take break 😊"
+        time.innerHTML = "05:00"
+      }
+    }, 10);
+
+
+  } else {
+    interval = setInterval(() => {
+      if (totalsecond > 0) {
+        totalsecond--;
+        updateTimer();
+      } else {
+        isworksession = true;
+        clearInterval(interval);
+        totalsecond = 25 * 60;message.innerHTML=" focus back &#128200;"
+        time.innerHTML = "25:00"
+      }
+    }, 10);
+  }
+}
+
+function pauseTimer() {
+  clearInterval(interval);
+}
+function resetTimer() {
+  clearInterval(interval);
+  totalsecond = 25 * 60;
+  updateTimer();
+}
+start.addEventListener("click", startTimer);
+
+pause.addEventListener("click", pauseTimer);
+reset.addEventListener("click", resetTimer);

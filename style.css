@@ -303,21 +303,33 @@ main .pomodoro .timerbg .timer {
   color: var(--sec);
   justify-items: center;
   align-items: center;
-  margin-top: 3rem;
-  padding: 4rem 3rem;
+  margin-top: 1rem;
+  padding: 1.5rem 3rem;
   background: #818181;
   justify-self: center;
   box-shadow: 0px 10px 900px #08cb00;
   border-radius: 150px;
-  border: 2px solid var(--ter1);
+  border: 20px solid var(--pri);
+}
+main .pomodoro .timerbg .timer .message {
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 2rem;
 }
 main .pomodoro .timerbg .timer .time {
   padding: 1.5rem;
   font-size: 10rem;
-  font-family: "Times New Roman", Times, serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  align-items: baseline;
+  justify-content: right;
+  font-weight: 700;
+}
+main .pomodoro .timerbg .timer h2 {
+  justify-self: right;
+  font-size: 50px;
+  font-weight: 400;
 }
 main .pomodoro .timerbg .timer .btn {
-  gap: 10px;
   padding: 2rem;
 }
 main .pomodoro .timerbg .timer .btn button {
