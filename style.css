@@ -52,12 +52,16 @@ main .elements .weather {
   margin-bottom: 20px;
 }
 main .elements .weather .weather-data {
+  background-image: url(./assets/profile.jpg);
+  background-size: cover;
+  border: 2px solid var(--pri);
   align-items: center;
   width: 75%;
   padding: 2rem;
   background-color: var(--ter1);
   border-radius: 20px;
   color: var(--sec);
+  text-shadow: 5px 5px 5px #000000;
 }
 main .elements .weather .weather-data .we-1 h1 {
   font-size: 50px;
@@ -73,12 +77,15 @@ main .elements .weather .weather-data .we-2 h1 {
 }
 main .elements .weather .weather-data .we-2 h3 {
   font-size: 15px;
-  font-weight: 400;
+  font-weight: 500;
 }
 main .elements .weather .imp {
   border-radius: 20px;
   background-color: var(--imp);
   width: 25%;
+  background-image: url(./assets/4412259_2369450.jpg);
+  background-size: cover;
+  border: 2px solid var(--pri);
 }
 main .elements .card .events {
   transition: all 0.8s ease-in-out;
@@ -89,6 +96,7 @@ main .elements .card .events {
   border-radius: 15px;
   overflow: hidden;
   position: relative;
+  text-shadow: 5px 5px 5px #000000;
 }
 main .elements .card .events .text {
   position: absolute;
@@ -104,7 +112,7 @@ main .elements .card .events img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 main .elements .card .events img:hover {
   cursor: pointer;
@@ -379,6 +387,7 @@ main .pomodoro .timerbg .timer .btn button:hover {
 main .pomodoro .timerbg .timer .btn button:active {
   scale: 0.95;
 }
+
 footer {
   width: 100%;
   height: 60px;
