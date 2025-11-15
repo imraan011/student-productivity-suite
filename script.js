@@ -126,7 +126,8 @@ function motivation() {
 
 motivation();
 
-let time = document.querySelector(".time h1");
+function pomodoroTimer(){
+  let time = document.querySelector(".time h1");
 let start = document.querySelector(".start");
 let pause = document.querySelector(".pause");
 let reset = document.querySelector(".reset");
@@ -190,3 +191,17 @@ start.addEventListener("click", startTimer);
 
 pause.addEventListener("click", pauseTimer);
 reset.addEventListener("click", resetTimer);
+
+}
+
+pomodoroTimer()
+
+let weatherApi = "beb05046555d40cb9aa141714251511"
+let city = "new delhi"
+async function weather(){
+  response = await fetch(`http://api.weatherapi.com/v1/current.json?key=${weatherApi}&q=${city}`)
+  let data = await response.json()
+  console.log(data);
+}
+weather()
+

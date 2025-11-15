@@ -25,28 +25,47 @@
     </nav>
 
     <main>
-      <section class="card flex absolute flex-wrap gap-10">
-        <div class="events" id="0">
-          <img src="./assets/todo.png" alt="" />
-          <h1 class="text">To-Do List</h1>
-        </div>
-        <div class="events" id="1">
-          <img src="./assets/pomodoro.png" alt="" />
-          <h1 class="text">Pomodoro Timer</h1>
-        </div>
-        <div class="events" id="2">
-          <img src="./assets/dailyplanner.png" alt="" />
-          <h1 class="text">Daily Planner</h1>
-        </div>
-        <div class="events" id="3">
-          <img src="./assets/motivation.png" alt="" />
-          <h1 class="text">Motivational Quote</h1>
-        </div>
-        <div class="events" id="4">
-          <img src="./assets/journal.png" alt="" />
-          <h1 class="text">Daily Journal</h1>
-        </div>
-      </section>
+      <div class="elements">
+        <section class="weather flex">
+          <div class="weather-data flex justify-between ">
+            <div class="we-1">
+              <h1>Saturday , 8:00:00 PM</h1>
+              <h3>November 2025</h3>
+              <h2>Delhi , India</h2>
+            </div>
+            <div class="we-2">
+              <h1>20°C</h1>
+              <h3>Humidity 49%</h3>
+              <h3>condition Mist</h3>
+              <h3>Wind 5.54 KpH</h3>
+            </div>
+          </div>
+          <div class="imp">asc</div>
+        </section>
+
+        <section class="card flex flex-wrap justify-between gap-10">
+          <div class="events" id="0">
+            <img src="./assets/todo.png" alt="" />
+            <h1 class="text">To-Do List</h1>
+          </div>
+          <div class="events" id="1">
+            <img src="./assets/pomodoro.png" alt="" />
+            <h1 class="text">Pomodoro Timer</h1>
+          </div>
+          <div class="events" id="2">
+            <img src="./assets/dailyplanner.png" alt="" />
+            <h1 class="text">Daily Planner</h1>
+          </div>
+          <div class="events" id="3">
+            <img src="./assets/motivation.png" alt="" />
+            <h1 class="text">Motivational Quote</h1>
+          </div>
+          <div class="events" id="4">
+            <img src="./assets/journal.png" alt="" />
+            <h1 class="text">Daily Journal</h1>
+          </div>
+        </section>
+      </div>
 
       <section class="fullevent todo-sec" id="0">
         <button class="back" id="0">Close</button>
@@ -91,7 +110,7 @@
           <div class="timer">
             <h1 class="message anima">Focus Back &#128200;</h1>
             <div class="time flex gap-5">
-              <h1>25:00 </h1>
+              <h1>25:00</h1>
               <h2>Min.</h2>
             </div>
             <div class="btn">
@@ -124,9 +143,11 @@
         </div>
       </section>
 
-      <section class="fullevent" id="4">
+      <section class="fullevent Daily-journal" id="4">
         <button class="back" id="4">Close</button>
         <h1 class="heading anima">Daily Journal</h1>
+
+        <div></div>
       </section>
     </main>
     <footer>
