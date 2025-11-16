@@ -193,88 +193,85 @@ function pomodoroTimer() {
 
 pomodoroTimer();
 
-function main_Time_Weather(){
-  
-let weatherApi = "beb05046555d40cb9aa141714251511";
-let city = "new delhi";
+function main_Time_Weather() {
+  let weatherApi = "beb05046555d40cb9aa141714251511";
+  let city = "new delhi";
 
-var header1 = document.querySelector(".we-1 h1");
-var header3 = document.querySelector(".we-1 h3");
-var header2 = document.querySelector(".we-1 h2");
-var temp = document.querySelector(".we-2 h1");
-let humid = document.querySelector(".we-2 .humid");
-let wind = document.querySelector(".we-2 .wind");
-let conditions = document.querySelector(".we-2 .condition");
+  var header1 = document.querySelector(".we-1 h1");
+  var header3 = document.querySelector(".we-1 h3");
+  var header2 = document.querySelector(".we-1 h2");
+  var temp = document.querySelector(".we-2 h1");
+  let humid = document.querySelector(".we-2 .humid");
+  let wind = document.querySelector(".we-2 .wind");
+  let conditions = document.querySelector(".we-2 .condition");
 
-async function weather() {
-  response = await fetch(
-    `http://api.weatherapi.com/v1/current.json?key=${weatherApi}&q=${city}`
-  );
-  let data = await response.json();
-  let condition = data.current.condition.text;
-  header2.innerHTML = `${data.location.name} , ${data.location.country}`;
-  temp.innerHTML = `${data.current.temp_c}`;
-  wind.innerHTML = `Wind : ${data.current.wind_kph}`;
-  conditions.innerHTML = `Condition : ${condition}`;
-  humid.innerHTML = `Humidity : ${data.current.humidity}`;
-}
-weather();
-
-function time_Date() {
-  let date = new Date();
-  const daysOfWeek = [
-    "Sunday",
-    "Monday",
-    "Tuesday",
-    "Wednesday",
-    "Thursday",
-    "Friday",
-    "Saturday",
-  ];
-  const months = [
-    "January",
-    "February",
-    "March",
-    "April",
-    "May",
-    "June",
-    "July",
-    "August",
-    "September",
-    "October",
-    "November",
-    "December",
-  ];
-
-  let tarik = date.getDate();
-  let month = months[date.getMonth()];
-  let year = date.getFullYear();
-  let day = daysOfWeek[date.getDay()];
-  let hour = date.getHours();
-  let minute = date.getMinutes();
-  let second = date.getSeconds();
-
-  if (hour > 12) {
-    header1.innerHTML = `${day} , ${String(hour - 12).padStart(
-      "2",
-      "0"
-    )}:${String(minute).padStart("2", "0")}:${String(second).padStart(
-      "2",
-      "0"
-    )} PM`;
-  } else {
-    header1.innerHTML = `${day} , ${String(hour).padStart("2", "0")}:${String(
-      minute
-    ).padStart("2", "0")}:${String(second).padStart("2", "0")} AM`;
+  async function weather() {
+    response = await fetch(
+      `http://api.weatherapi.com/v1/current.json?key=${weatherApi}&q=${city}`
+    );
+    let data = await response.json();
+    let condition = data.current.condition.text;
+    header2.innerHTML = `${data.location.name} , ${data.location.country}`;
+    temp.innerHTML = `${data.current.temp_c}°C  `;
+    wind.innerHTML = `Wind : ${data.current.wind_kph}`;
+    conditions.innerHTML = `Condition : ${condition}`;
+    humid.innerHTML = `Humidity : ${data.current.humidity}`;
   }
+  weather();
 
-  header3.innerHTML = `${month} , ${year}`;
+  function time_Date() {
+    let date = new Date();
+    const daysOfWeek = [
+      "Sunday",
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday",
+      "Saturday",
+    ];
+    const months = [
+      "January",
+      "February",
+      "March",
+      "April",
+      "May",
+      "June",
+      "July",
+      "August",
+      "September",
+      "October",
+      "November",
+      "December",
+    ];
+
+    let tarik = date.getDate();
+    let month = months[date.getMonth()];
+    let year = date.getFullYear();
+    let day = daysOfWeek[date.getDay()];
+    let hour = date.getHours();
+    let minute = date.getMinutes();
+    let second = date.getSeconds();
+
+    if (hour > 12) {
+      header1.innerHTML = `${day} , ${String(hour - 12).padStart(
+        "2",
+        "0"
+      )}:${String(minute).padStart("2", "0")}:${String(second).padStart(
+        "2",
+        "0"
+      )} PM`;
+    } else {
+      header1.innerHTML = `${day} , ${String(hour).padStart("2", "0")}:${String(
+        minute
+      ).padStart("2", "0")}:${String(second).padStart("2", "0")} AM`;
+    }
+
+    header3.innerHTML = `${month} , ${year}`;
+  }
+  setInterval(() => {
+    time_Date();
+  }, 1000);
 }
-setInterval(() => {
-  time_Date();
-}, 1000);
 
-}
-
-main_Time_Weather()
-
+main_Time_Weather();
