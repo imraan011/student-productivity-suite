@@ -213,7 +213,7 @@ function main_Time_Weather() {
     let condition = data.current.condition.text;
     header2.innerHTML = `${data.location.name} , ${data.location.country}`;
     temp.innerHTML = `${data.current.temp_c}°C  `;
-    wind.innerHTML = `Wind : ${data.current.wind_kph}`;
+    wind.innerHTML = `Wind : ${data.current.wind_kph}Km/h`;
     conditions.innerHTML = `Condition : ${condition}`;
     humid.innerHTML = `Humidity : ${data.current.humidity}`;
   }
